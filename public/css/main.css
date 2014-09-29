@@ -74,6 +74,11 @@ html, body {
   text-align: center;
   width: 100%;
 }
+#emotions button {
+  height: 100%;
+  padding: 0;
+  width: 100%;
+}
 .emotion {
   font-size: 20px;
   font-weight: bold;
