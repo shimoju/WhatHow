@@ -67,12 +67,19 @@ html, body {
   width: 25%;
 }
 
+#how-wrap {
+  border-top: 1px solid #ccc;
+}
 #what, #how {
   border: none;
+  border-radius: 0;
   height: 100%;
   margin: 0;
   padding: 0;
   width: 100%;
+}
+#what:focus, #how:focus {
+  outline: 0;
 }
 
 #emotions {
