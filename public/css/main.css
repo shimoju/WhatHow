@@ -88,12 +88,28 @@ html, body {
   text-align: center;
   width: 100%;
 }
-#emotions button {
+.btn-emotion {
+  background: #FEF13B;
+  border: none;
+  color: #555;
   height: 100%;
   padding: 0;
   width: 100%;
 }
+.btn-emotion:focus {
+  outline: 0;
+}
+.btn-emotion:active {
+  background: #eadb35;
+}
+#emotions td {
+  border: 1px solid #afa628;
+}
 .emotion {
+  color: #E8008A;
   font-size: 20px;
   font-weight: bold;
+}
+.emotion:active {
+  color: #ff0094;
 }
