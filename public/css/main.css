@@ -39,10 +39,17 @@ html, body {
 
 
 #header {
+  background-color: #00A0E6;
+  color: #fff;
   display: table;
 }
 #header > * {
   display: table-cell;
+  vertical-align: middle;
+}
+#header a {
+  color: #fff;
+  text-decoration: none;
 }
 
 #logo {
