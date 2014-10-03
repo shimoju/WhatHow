@@ -59,12 +59,11 @@ html, body {
   text-align: center;
   text-transform: uppercase;
 }
-#nav {
+#nav, #tweet {
   width: 25%;
 }
 #tweet {
   text-align: right;
-  width: 25%;
 }
 
 #how-wrap {
