@@ -1,8 +1,3 @@
-require 'sinatra/base'
-require 'sinatra/reloader'
-require 'omniauth-twitter'
-require 'twitter'
-
 class App < Sinatra::Base
   configure do
     enable :sessions
@@ -14,6 +9,7 @@ class App < Sinatra::Base
   end
 
   configure :development do
+    require 'sinatra/reloader'
     register Sinatra::Reloader
   end
 

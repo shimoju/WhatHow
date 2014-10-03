@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'sinatra'
-gem 'sinatra-contrib'
+gem 'sinatra', require: 'sinatra/base'
+gem 'sinatra-contrib', require: false
 
-gem 'foreman'
-gem 'puma'
+gem 'foreman', require: false
+gem 'puma', require: false
 gem 'omniauth-twitter'
 gem 'twitter'
