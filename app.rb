@@ -8,6 +8,10 @@ class App < Sinatra::Base
     end
   end
 
+  configure :production do
+    use Rack::SSL
+  end
+
   configure :development do
     require 'sinatra/reloader'
     register Sinatra::Reloader
