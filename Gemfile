@@ -9,3 +9,7 @@ gem 'puma', require: false
 gem 'slim'
 gem 'omniauth-twitter'
 gem 'twitter'
+
+group :production do
+  gem 'rack-ssl'
+end
