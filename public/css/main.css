@@ -39,7 +39,7 @@ html, body {
 
 
 #header {
-  background-color: #00A0E6;
+  background-color: #00a0e6;
   color: #fff;
   display: table;
 }
@@ -89,7 +89,7 @@ html, body {
   width: 100%;
 }
 .btn-emotion {
-  background: #FEF13B;
+  background: #fef13b;
   border: none;
   color: #555;
   height: 100%;
@@ -106,7 +106,7 @@ html, body {
   border: 1px solid #afa628;
 }
 .emotion {
-  color: #E8008A;
+  color: #e8008a;
   font-size: 20px;
   font-weight: bold;
 }
