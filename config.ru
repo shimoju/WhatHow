@@ -1,5 +1,5 @@
 require 'bundler/setup'
-Bundler.require
+Bundler.require(:default, ENV['RACK_ENV'] || :development)
 
 require './app'
 run App
