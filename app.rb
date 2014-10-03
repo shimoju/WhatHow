@@ -26,9 +26,9 @@ class App < Sinatra::Base
 
   get '/' do
     unless session[:user]
-      erb :index
+      slim :index
     else
-      erb :home
+      slim :home
     end
   end
 
