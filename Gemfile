@@ -5,5 +5,6 @@ gem 'sinatra-contrib', require: false
 
 gem 'foreman', require: false
 gem 'puma', require: false
+gem 'slim'
 gem 'omniauth-twitter'
 gem 'twitter'
