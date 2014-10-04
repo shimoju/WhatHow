@@ -8,7 +8,9 @@ gem 'uglifier'
 
 gem 'foreman', require: false
 gem 'puma', require: false
+
 gem 'slim'
+gem 'compass'
 gem 'omniauth-twitter'
 gem 'twitter'
 
