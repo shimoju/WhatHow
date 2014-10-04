@@ -3,6 +3,7 @@ Bundler.require(:default, ENV['RACK_ENV'] || :development)
 
 class WhatHow < Sinatra::Base
   configure do
+    set :assets_precompile, %w(application.js application.css *.png *.jpg *.svg *.eot *.ttf *.woff)
     register Sinatra::AssetPipeline
 
     enable :sessions

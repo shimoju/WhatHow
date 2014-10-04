@@ -4,10 +4,10 @@ html lang="ja"
     meta charset="utf-8"
     title WhatHow
     meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
-    link rel="stylesheet" href="css/main.css"
+    == stylesheet_tag 'application'
   body
     == yield
 
     /! JavaScript
     script src="//cdn.jsdelivr.net/jquery/2.1.1/jquery.min.js"
-    script src="js/main.js"
+    == javascript_tag 'application'
