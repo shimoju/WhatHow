@@ -1,3 +1,6 @@
+require 'bundler/setup'
+Bundler.require(:default, ENV['RACK_ENV'] || :development)
+
 class WhatHow < Sinatra::Base
   configure do
     enable :sessions
