@@ -3,6 +3,8 @@ Bundler.require(:default, ENV['RACK_ENV'] || :development)
 
 class WhatHow < Sinatra::Base
   configure do
+    register Sinatra::AssetPipeline
+
     enable :sessions
 
     set twitter_api_key: ENV['TWITTER_API_KEY'], twitter_api_secret: ENV['TWITTER_API_SECRET']
