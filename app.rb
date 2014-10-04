@@ -1,4 +1,4 @@
-class App < Sinatra::Base
+class WhatHow < Sinatra::Base
   configure do
     enable :sessions
 
