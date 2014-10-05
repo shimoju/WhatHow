@@ -3,10 +3,10 @@
 }
 
 html {
-  background-color: #fff;
-  color: #222;
-  font-family: sans-serif;
-  font-size: 1em;
+  background-color: $body-bg;
+  color: $text-color;
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-base;
   line-height: 1.5;
 }
 
@@ -34,21 +34,21 @@ html, body {
 
 
 #header {
-  background-color: #00a0e6;
-  color: #fff;
+  background-color: $header-bg;
+  color: $header-color;
   display: table;
-}
-#header > * {
-  display: table-cell;
-  vertical-align: middle;
-}
-#header a {
-  color: #fff;
-  text-decoration: none;
+  > * {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  a {
+    color: $header-color;
+    text-decoration: none;
+  }
 }
 
 #logo {
-  font-size: 1.5rem;
+  font-size: $logo-font-size;
   font-weight: normal;
   margin: 0;
   text-align: center;
@@ -71,9 +71,9 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-}
-#what:focus, #how:focus {
-  outline: 0;
+  &:focus {
+    outline: 0;
+  }
 }
 
 #emotions {
@@ -81,29 +81,29 @@ html, body {
   table-layout: fixed;
   text-align: center;
   width: 100%;
+  td {
+    border: 1px solid darken($main-color, 25%);
+  }
 }
 .btn-emotion {
-  background-color: #fef13b;
+  background-color: $emotion-bg;
   border: none;
   color: #555;
   height: 100%;
   padding: 0;
   width: 100%;
-}
-.btn-emotion:focus {
-  outline: 0;
-}
-.btn-emotion:active {
-  background-color: #eadb35;
-}
-#emotions td {
-  border: 1px solid #afa628;
+  &:focus {
+    outline: 0;
+  }
+  &:active {
+    background-color: darken($emotion-bg, 15%);
+  }
 }
 .emotion {
-  color: #e8008a;
-  font-size: 1.25rem;
+  color: $emotion-color;
+  font-size: $emotion-font-size;
   font-weight: bold;
-}
-.emotion:active {
-  color: #ff0094;
+  &:active {
+    color: lighten($emotion-color, 5%);
+  }
 }
