@@ -8,6 +8,15 @@ html {
   font-family: $font-family-sans-serif;
   font-size: $font-size-base;
   line-height: 1.5;
+  @include mediaquery-sm {
+    font-size: $sm-font-size-base;
+  }
+  @include mediaquery-md {
+    font-size: $md-font-size-base;
+  }
+  @include mediaquery-lg {
+    font-size: $lg-font-size-base;
+  }
 }
 
 
