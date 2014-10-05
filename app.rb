@@ -17,10 +17,12 @@ class WhatHow < Sinatra::Base
   end
 
   configure :production do
+    set :session_secret, ENV['SESSION_SECRET']
     use Rack::SSL
   end
 
   configure :development, :test do
+    set :session_secret, '863a600a5252977c643137ba719628a51d7005ad2bada16546d37926025ce3404934192ea1975be2fcf75950026e245da528a5620411833bcfe5e13efb450314'
     Dotenv.load
   end
 
