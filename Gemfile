@@ -17,3 +17,7 @@ gem 'twitter'
 group :production do
   gem 'rack-ssl'
 end
+
+group :development, :test do
+  gem 'dotenv'
+end

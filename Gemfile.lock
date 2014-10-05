@@ -124,6 +124,7 @@ PLATFORMS
 
 DEPENDENCIES
   compass
+  dotenv
   foreman
   omniauth-twitter
   puma

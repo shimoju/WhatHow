@@ -20,6 +20,10 @@ class WhatHow < Sinatra::Base
     use Rack::SSL
   end
 
+  configure :development, :test do
+    Dotenv.load
+  end
+
   configure :development do
     require 'sinatra/reloader'
     register Sinatra::Reloader
