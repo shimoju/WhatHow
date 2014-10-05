@@ -1,5 +1,6 @@
 $(function() {
-  $('.emotion').click(function() {
+  $('.emotion').on('touchstart click', function(event) {
+    event.preventDefault();
     var how = document.getElementById('how');
     how.value += $(this).text();
   });
