@@ -40,7 +40,7 @@ class WhatHow < Sinatra::Base
     unless session[:user]
       slim :index
     else
-      slim :home
+      slim :whathow
     end
   end
 
@@ -48,7 +48,7 @@ class WhatHow < Sinatra::Base
     if session[:user]
       redirect to('/')
     else
-      slim :home
+      slim :whathow
     end
   end
 
