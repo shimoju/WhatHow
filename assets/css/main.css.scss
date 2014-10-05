@@ -103,7 +103,7 @@ html, body {
     outline: 0;
   }
   &:active {
-    background-color: darken($emotion-bg, 15%);
+    background-color: $emotion-color;
   }
 }
 .emotion {
@@ -111,6 +111,6 @@ html, body {
   font-size: $emotion-font-size;
   font-weight: bold;
   &:active {
-    color: lighten($emotion-color, 5%);
+    color: $emotion-bg;
   }
 }
