@@ -44,6 +44,14 @@ class WhatHow < Sinatra::Base
     end
   end
 
+  get '/tweet-button' do
+    if session[:user]
+      redirect to('/')
+    else
+      slim :home
+    end
+  end
+
   get '/auth/:provider/callback' do
     auth = request.env['omniauth.auth']
     session[:user] = {
