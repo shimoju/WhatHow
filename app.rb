@@ -32,6 +32,10 @@ class WhatHow < Sinatra::Base
   end
 
   helpers do
+    def signed_in?
+      session[:user] ? true : false
+    end
+
     def create_twitter_client
       Twitter::REST::Client.new do |config|
         config.consumer_key = settings.twitter_api_key
@@ -43,7 +47,7 @@ class WhatHow < Sinatra::Base
   end
 
   get '/' do
-    unless session[:user]
+    unless signed_in?
       slim :index
     else
       slim :whathow
@@ -51,7 +55,7 @@ class WhatHow < Sinatra::Base
   end
 
   get '/tweet-button' do
-    if session[:user]
+    if signed_in?
       redirect to('/')
     else
       slim :whathow

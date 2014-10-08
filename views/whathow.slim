@@ -1,10 +1,10 @@
 header#header
-  - if session[:user]
+  - if signed_in?
     a.nav href="/logout" ログアウト
   - else
     a.nav href="/auth/twitter" ログイン
   h1#logo: a href="/" WhatHow
-  - if session[:user]
+  - if signed_in?
     a.nav.btn-tweet href="https://twitter.com/share" ツイート
   - else
     a.nav.btn-tweet href="https://twitter.com/share" ツイート
