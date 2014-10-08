@@ -46,6 +46,7 @@ html, body {
   background-color: $header-bg;
   color: $header-color;
   display: table;
+  text-align: center;
   > * {
     display: table-cell;
     vertical-align: middle;
@@ -60,13 +61,9 @@ html, body {
   font-size: $logo-font-size;
   font-weight: normal;
   margin: 0;
-  text-align: center;
 }
 #nav, #tweet {
   width: 25%;
-}
-#tweet {
-  text-align: right;
 }
 
 #how-wrap {
