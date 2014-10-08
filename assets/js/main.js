@@ -5,7 +5,7 @@ $(function() {
     how.value += $(this).text();
   });
 
-  $('#btn-tweet').click(function() {
+  $('.btn-tweet').click(function() {
     // 別ウインドウで開くようにする
     this.target = '_blank'
 

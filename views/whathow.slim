@@ -1,15 +1,13 @@
 header#header
-  nav#nav
-    - if session[:user]
-      a href="/logout" ログアウト
-    - else
-      a href="/auth/twitter" ログイン
+  - if session[:user]
+    a.nav href="/logout" ログアウト
+  - else
+    a.nav href="/auth/twitter" ログイン
   h1#logo: a href="/" WhatHow
-  #tweet
-    - if session[:user]
-      a#btn-tweet href="https://twitter.com/share" ツイート
-    - else
-      a#btn-tweet href="https://twitter.com/share" ツイート
+  - if session[:user]
+    a.nav.btn-tweet href="https://twitter.com/share" ツイート
+  - else
+    a.nav.btn-tweet href="https://twitter.com/share" ツイート
 
 #what-wrap
   textarea#what placeholder="What"

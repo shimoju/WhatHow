@@ -70,8 +70,11 @@ html, body {
   font-weight: normal;
   margin: 0;
 }
-#nav, #tweet {
+.nav {
   width: 25%;
+  &:hover {
+    background-color: lighten($header-bg, 5%);
+  }
 }
 
 #how-wrap {
