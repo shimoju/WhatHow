@@ -4,7 +4,7 @@ header#header
       a href="/logout" ログアウト
     - else
       a href="/auth/twitter" ログイン
-  h1#logo WhatHow
+  h1#logo: a href="/" WhatHow
   #tweet
     - if session[:user]
       a#btn-tweet href="https://twitter.com/share" ツイート
