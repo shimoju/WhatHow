@@ -19,6 +19,14 @@ html {
   }
 }
 
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover, &:focus {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+}
 
 /* Height */
 html, body {
