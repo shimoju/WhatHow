@@ -3,12 +3,12 @@ Bundler.require(:default, ENV['RACK_ENV'] || :development)
 
 class WhatHow < Sinatra::Base
   configure do
+    enable :sessions
+
     set :assets_precompile, %w(application.js application.css *.png *.jpg *.svg *.eot *.ttf *.woff)
     set :assets_css_compressor, :sass
     set :assets_js_compressor, :uglifier
     register Sinatra::AssetPipeline
-
-    enable :sessions
 
     set twitter_api_key: ENV['TWITTER_API_KEY'], twitter_api_secret: ENV['TWITTER_API_SECRET']
     use OmniAuth::Builder do
@@ -47,19 +47,16 @@ class WhatHow < Sinatra::Base
   end
 
   get '/' do
-    unless signed_in?
-      slim :index
-    else
+    if signed_in?
       slim :whathow
+    else
+      slim :index
     end
   end
 
   get '/tweet-button' do
-    if signed_in?
-      redirect to('/')
-    else
-      slim :whathow
-    end
+    redirect to('/') if signed_in?
+    slim :whathow
   end
 
   get '/auth/:provider/callback' do
