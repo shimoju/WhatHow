@@ -142,6 +142,7 @@ DEPENDENCIES
   omniauth-twitter
   puma
   rack-ssl
+  rack-test
   rspec
   sinatra
   sinatra-asset-pipeline

@@ -18,6 +18,10 @@ group :production do
   gem 'rack-ssl'
 end
 
+group :test do
+  gem 'rack-test'
+end
+
 group :development, :test do
   gem 'rspec'
   gem 'dotenv'
