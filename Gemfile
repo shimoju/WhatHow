@@ -19,5 +19,6 @@ group :production do
 end
 
 group :development, :test do
+  gem 'rspec'
   gem 'dotenv'
 end
