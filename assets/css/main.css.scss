@@ -76,6 +76,13 @@ html, body, #wrap {
     background-color: lighten($header-bg, 5%);
   }
 }
+#tweet {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  padding: 0;
+  width: 100%;
+}
 
 #how-wrap {
   border-top: 1px solid #ccc;
