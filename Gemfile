@@ -15,6 +15,8 @@ gem 'compass'
 gem 'omniauth-twitter'
 gem 'twitter'
 
+gem 'rails-assets-normalize.css'
+
 group :production do
   gem 'rack-ssl'
 end
