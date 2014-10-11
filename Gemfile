@@ -1,5 +1,6 @@
 ruby '2.1.3'
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 gem 'sinatra', require: 'sinatra/base'
 gem 'sinatra-contrib', require: false
