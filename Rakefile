@@ -1,6 +1,6 @@
-require 'sinatra/asset_pipeline/task'
 require_relative 'app'
 
+require 'sinatra/asset_pipeline/task'
 Sinatra::AssetPipeline::Task.define! WhatHow
 
 begin
