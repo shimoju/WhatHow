@@ -10,6 +10,9 @@ class WhatHow < Sinatra::Base
     set :assets_css_compressor, :sass
     set :assets_js_compressor, :uglifier
     register Sinatra::AssetPipeline
+    if defined?(RailsAssets)
+      RailsAssets.load_paths.each { |path| settings.sprockets.append_path(path) }
+    end
 
     set twitter_api_key: ENV['TWITTER_API_KEY'], twitter_api_secret: ENV['TWITTER_API_SECRET']
     use OmniAuth::Builder do
