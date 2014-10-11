@@ -1,6 +1,7 @@
 ENV['RACK_ENV'] ||= 'development'
 require 'bundler/setup'
 Bundler.require(:default, ENV['RACK_ENV'])
+Dotenv.load if defined?(Dotenv)
 
 class WhatHow < Sinatra::Base
   configure do
@@ -26,7 +27,6 @@ class WhatHow < Sinatra::Base
 
   configure :development, :test do
     set :session_secret, '863a600a5252977c643137ba719628a51d7005ad2bada16546d37926025ce3404934192ea1975be2fcf75950026e245da528a5620411833bcfe5e13efb450314'
-    Dotenv.load
   end
 
   configure :development do
