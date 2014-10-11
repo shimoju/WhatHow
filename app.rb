@@ -59,6 +59,15 @@ class WhatHow < Sinatra::Base
     slim :whathow
   end
 
+  post '/tweet' do
+    redirect to('/') unless signed_in?
+    tweet = "#{params[:what]}#{params[:how]} #WhatHow"
+    redirect to('/') if Twitter::Validation.tweet_invalid?(tweet)
+    twitter = create_twitter_client
+    twitter.update(tweet)
+    redirect to('/')
+  end
+
   get '/auth/:provider/callback' do
     auth = request.env['omniauth.auth']
     session[:user] = {
