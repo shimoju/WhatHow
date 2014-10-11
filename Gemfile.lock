@@ -146,9 +146,14 @@ GEM
       memoizable (~> 0.4.0)
       naught (~> 1.0)
       simple_oauth (~> 0.2.0)
+    twitter-text (1.9.2)
+      unf (~> 0.1.0)
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.6)
     websocket-driver (0.3.5)
     xpath (2.0.0)
       nokogiri (~> 1.3)
@@ -173,4 +178,5 @@ DEPENDENCIES
   sinatra-contrib
   slim
   twitter
+  twitter-text
   uglifier

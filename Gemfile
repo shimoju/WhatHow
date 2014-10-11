@@ -14,6 +14,7 @@ gem 'slim'
 gem 'compass'
 gem 'omniauth-twitter'
 gem 'twitter'
+gem 'twitter-text'
 
 gem 'rails-assets-normalize.css'
 
