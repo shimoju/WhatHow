@@ -14,7 +14,6 @@ class WhatHow < Sinatra::Base
       RailsAssets.load_paths.each { |path| settings.sprockets.append_path(path) }
     end
 
-    set twitter_api_key: ENV['TWITTER_API_KEY'], twitter_api_secret: ENV['TWITTER_API_SECRET']
     use OmniAuth::Builder do
       provider :twitter, ENV['TWITTER_API_KEY'], ENV['TWITTER_API_SECRET']
     end
@@ -42,8 +41,8 @@ class WhatHow < Sinatra::Base
 
     def create_twitter_client
       Twitter::REST::Client.new do |config|
-        config.consumer_key = settings.twitter_api_key
-        config.consumer_secret = settings.twitter_api_secret
+        config.consumer_key = ENV['TWITTER_API_KEY']
+        config.consumer_secret = ENV['TWITTER_API_SECRET']
         config.access_token = session[:user][:token]
         config.access_token_secret = session[:user][:secret]
       end
