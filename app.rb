@@ -6,6 +6,8 @@ Dotenv.load if defined?(Dotenv)
 class WhatHow < Sinatra::Base
   configure do
     enable :sessions
+    set :protection, except: :remote_token
+    use Rack::Protection::AuthenticityToken
 
     set :assets_precompile, %w(application.js application.css *.png *.jpg *.svg *.eot *.ttf *.woff)
     set :assets_css_compressor, :sass
