@@ -34,6 +34,10 @@ class WhatHow < Sinatra::Base
   end
 
   helpers do
+    def token_tag
+      %Q(<input name="authenticity_token" type="hidden" value="#{session[:csrf]}" />)
+    end
+
     def signed_in?
       session[:user] ? true : false
     end
