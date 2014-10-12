@@ -17,6 +17,7 @@ gem 'twitter'
 gem 'twitter-text'
 
 gem 'rails-assets-normalize.css'
+gem 'rails-assets-jquery'
 
 group :production do
   gem 'rack-ssl'
