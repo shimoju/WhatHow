@@ -31,6 +31,7 @@ class WhatHow < Sinatra::Base
     set :session_secret, '863a600a5252977c643137ba719628a51d7005ad2bada16546d37926025ce3404934192ea1975be2fcf75950026e245da528a5620411833bcfe5e13efb450314'
     require 'sinatra/reloader'
     register Sinatra::Reloader
+    Slim::Engine.set_default_options pretty: true, sort_attrs: false
   end
 
   helpers do
