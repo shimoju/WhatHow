@@ -2,3 +2,13 @@ language: ruby
 rvm:
   - 2.1.3
 bundler_args: --without development production --deployment
+deploy:
+  provider: heroku
+  strategy: api
+  api_key:
+    secure: lLsmWWud82YkhSipDbCIC8i9uoe+Ge43SiKdt3y21i46TmbOAOzMNP8Q20thsqVEOCwdPyYqPD1CnJu+k2s7U+CWD+A4BsTVDrjkVfPplle3R6dFxZTXKTdRF1NPN9c4KZUy5AXrJKLw/CRlazE+e7tuNiG8Lg3FYASu9hEVUd4=
+  app:
+    master: whathow
+    develop: whathow-staging
+  on:
+    repo: shimoju/WhatHow
