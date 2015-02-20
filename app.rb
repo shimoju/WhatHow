@@ -12,6 +12,7 @@ class WhatHow < Sinatra::Base
     set :assets_precompile, %w(application.js application.css *.png *.jpg *.svg *.eot *.ttf *.woff) + %w(jquery.js)
     set :assets_css_compressor, :sass
     set :assets_js_compressor, :uglifier
+    set :assets_digest, false if settings.development?
     register Sinatra::AssetPipeline
     if defined?(RailsAssets)
       RailsAssets.load_paths.each { |path| settings.sprockets.append_path(path) }
