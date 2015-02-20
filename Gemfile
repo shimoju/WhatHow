@@ -36,6 +36,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'rack-livereload'
   gem 'guard'
   gem 'terminal-notifier'
   gem 'terminal-notifier-guard'

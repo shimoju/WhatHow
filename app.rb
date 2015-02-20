@@ -32,6 +32,7 @@ class WhatHow < Sinatra::Base
     require 'sinatra/reloader'
     register Sinatra::Reloader
     Slim::Engine.set_options pretty: true, sort_attrs: false
+    use Rack::LiveReload
   end
 
   helpers do
