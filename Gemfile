@@ -1,6 +1,5 @@
 ruby '2.2.0'
 source 'https://rubygems.org'
-source 'https://rails-assets.org'
 
 gem 'sinatra', require: 'sinatra/base'
 gem 'sinatra-contrib', require: false
@@ -16,8 +15,10 @@ gem 'omniauth-twitter'
 gem 'twitter'
 gem 'twitter-text'
 
-gem 'rails-assets-normalize.css'
-gem 'rails-assets-jquery'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-normalize.css'
+  gem 'rails-assets-jquery'
+end
 
 group :production do
   gem 'rack-ssl'
