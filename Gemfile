@@ -34,3 +34,12 @@ group :development, :test do
   gem 'rspec'
   gem 'dotenv'
 end
+
+group :development do
+  gem 'guard'
+  gem 'terminal-notifier'
+  gem 'terminal-notifier-guard'
+  gem 'guard-livereload', require: false
+  gem 'guard-pow', require: false
+  gem 'guard-rspec', require: false
+end
