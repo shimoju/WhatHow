@@ -30,6 +30,9 @@ guard 'livereload' do
   watch(%r{config/locales/.+\.yml})
   # Rails Assets Pipeline
   watch(%r{(app|vendor)(/assets/\w+/(.+\.(css|js|html|png|jpg))).*}) { |m| "/assets/#{m[3]}" }
+
+  watch(%r{views/.+\.(erb|haml|slim)$})
+  watch(%r{assets/\w+/(.+\.(css|js|html|png|jpg)).*}) { |m| "/assets/#{m[1]}" }
 end
 
 guard 'pow' do
@@ -96,4 +99,6 @@ guard :rspec, cmd: "bundle exec rspec" do
   watch(%r{^spec/acceptance/steps/(.+)_steps\.rb$}) do |m|
     Dir[File.join("**/#{m[1]}.feature")][0] || "spec/acceptance"
   end
+
+  dsl.watch_spec_files_for(%r{^(app)\.rb$})
 end
